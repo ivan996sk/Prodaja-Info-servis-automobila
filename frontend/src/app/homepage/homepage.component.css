@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid green;
+    background-color: grey;
+    opacity: 0.9;
+  }
+
+th{
+    border:1px solid rgb(19, 0, 128);
+    height: 30px;
+    background-color:gray;
+}
+
+td{
+    border:1px solid rgb(19, 0, 128);
+    height: 30px;
+    text-align: center;
+}

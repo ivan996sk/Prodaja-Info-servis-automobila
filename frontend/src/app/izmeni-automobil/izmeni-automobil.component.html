@@ -1,0 +1,27 @@
+<div *ngIf="automobil" id="forma">
+    <label>Brand:</label>
+    <input type="text" [(ngModel)]="automobil.brand" ><br>
+    <label>Model:</label> 
+    <input type="text"  [(ngModel)]="automobil.model"><br>
+    <label>Godiste:</label> 
+    <input type="number"  [(ngModel)]="automobil.godiste"> <br>
+    <label>Grad:</label> 
+    <input type="text"  [(ngModel)]="automobil.grad"> <br>
+    <label>Kubikaza:</label> 
+    <input type="number"  [(ngModel)]="automobil.kubikaza"> <br>
+    <label>Kilometraza:</label>
+    <input type="number"  [(ngModel)]="automobil.kilometraza"> <br>
+    <label>Registrovan do:</label>
+    <input type="text"  [(ngModel)]="automobil.registrovanDo"><br>
+    <label>Boja:</label>
+    <input type="text"  [(ngModel)]="automobil.boja"><br>
+    <label>Cena:</label> 
+    <input type="number"  [(ngModel)]="automobil.price"><br>
+
+    <button (click)="izmeni(automobil)">Sačuvaj izmene</button><br>
+    <button (click)="back()">Nazad na početnu</button> 
+</div>
+
+<div *ngIf="izmenio" id="forma">
+    <p style="color:green">Uspešno izmenjeni podaci!</p>
+</div>

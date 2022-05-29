@@ -1,0 +1,31 @@
+<table *ngIf="automobili">
+    <tr>
+        <th colspan="11">SPISAK DOSTUPNIH AUTOMOBILA</th>
+    </tr>
+    <tr>
+        <th>BREND</th>
+        <th>MODEL</th>
+        <th>GODISTE</th>
+        <th>GRAD</th>
+        <th>KUBIKAZA</th>
+        <th>KILOMETRAZA</th>
+        <th>REGISTROVAN DO</th>
+        <th>BOJA</th>
+        <th>CENA</th>
+        <th>UREDI</th>
+        <th>OBRIŠI</th>
+    </tr>
+    <tr *ngFor="let automobil of automobili" (click)="pogledaj(automobil.id)">
+        <td>{{automobil.brand}}</td>
+        <td>{{automobil.model}}</td>
+        <td>{{automobil.godiste}} god</td>
+        <td>{{automobil.grad}} kubika</td>
+        <td>{{automobil.kubikaza}}</td>
+        <td>{{automobil.kilometraza}} km</td>
+        <td>{{automobil.registrovanDo}}</td>
+        <td>{{automobil.boja}}</td>
+        <td>{{automobil.price}} €</td>
+        <td ><button (click)="izmeni(automobil)">IZMENI</button></td>
+        <td ><button (click)="obrisi(automobil)">ORBIŠI</button></td>
+    </tr>
+</table>

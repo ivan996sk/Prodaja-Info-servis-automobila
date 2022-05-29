@@ -1,0 +1,26 @@
+<div id="forma">
+    <h2>DODAJ AUTOMOBIL</h2>
+    <label>Brand:</label>
+    <input type="text" placeholder=" Alfa Romeo" [(ngModel)]="automobil.brand"><br>
+    <label>Model:</label>
+    <input type="text" placeholder=" Gulia" [(ngModel)]="automobil.model"><br>
+    <label>Godiste:</label>  &nbsp;
+    <input type="number" placeholder="2009" [(ngModel)]="automobil.godiste"> <br>
+    <label>Grad:</label>&nbsp;
+    <input type="text" placeholder="Beograd" [(ngModel)]="automobil.grad"> <br>
+    <label>Kubikaza:</label>  &nbsp; &nbsp;
+    <input type="number" placeholder="1900" [(ngModel)]="automobil.kubikaza"> <br>
+    <label>Kilometraza:</label>
+    <input type="number" placeholder="156271" [(ngModel)]="automobil.kilometraza"> <br>
+    <label>Registrovan do:</label>
+    <input type="text" placeholder="10.2022" [(ngModel)]="automobil.registrovanDo"><br>
+    <label>Boja:</label>
+    <input type="text" placeholder="Crna mat" [(ngModel)]="automobil.boja"><br>
+    <label>Cena:</label>  &nbsp; &nbsp; &nbsp; &nbsp;
+    <input type="number" placeholder="7220" [(ngModel)]="automobil.price"><br>
+    
+    <button (click)="dodaj(automobil)">Dodaj automobil</button> 
+
+    <button (click)="back()">Nazad na početnu</button> 
+</div>
+

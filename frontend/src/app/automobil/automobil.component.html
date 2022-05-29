@@ -1,0 +1,42 @@
+<div *ngIf="automobil" id="forma">
+    <h4>Karakteristike automobila:</h4>
+  <b>Brend:</b> {{automobil.brand}}  <br>
+  <b>Model</b>: {{automobil.model}} <br>
+  <b>GODISTE</b>: {{automobil.godiste}} GOD<br>
+  <b>KUBIKAZA</b>: {{automobil.kubikaza}}<br>
+  <b>GRAD</b>: {{automobil.grad}}<br>
+  <b>BOJA</b>: {{automobil.boja}}<br>
+  <b>KILOMETRAZA</b>: {{automobil.kilometraza}} km<br>
+  <b>REGISTROVAN DO</b>: {{automobil.registrovanDo}} <br>
+  <b>Cena</b>: {{automobil.price}} €<br><br>
+
+
+  <table *ngIf="automobiliM">
+    <tr>
+        <th colspan="9">AUTOMOBILI MARKE {{automobil.brand}}</th>
+    </tr>
+    <tr>
+        <th>Brend</th>
+        <th>MODEL</th>
+        <th>GODISTE</th>
+        <th>KUBIKAZA</th>
+        <th>GRAD</th>
+        <th>BOJA</th>
+        <th>KILOMETRAZA</th>
+        <th>REGISTROVAN DO</th>
+        <th>Cena</th>
+    </tr>
+    <tr *ngFor="let automobil of automobiliM" (click)="pogledaj(automobil.id)">
+        <td>{{automobil.brand}}</td>
+        <td>{{automobil.model}}</td>
+        <td>{{automobil.godiste}}</td>
+        <td>{{automobil.kubikaza}}</td>
+        <td>{{automobil.grad}}</td>
+        <td>{{automobil.boja}}</td>
+        <td>{{automobil.kilometraza}}</td>
+        <td>{{automobil.registrovanDo}}</td>
+        <td>{{automobil.price}} €</td>
+    </tr>
+</table>
+</div>
+<router-outlet></router-outlet>
